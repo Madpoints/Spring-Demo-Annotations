@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 	
+	@Autowired
 	private FortuneService fortuneService;
 	
 	// default constructor
@@ -14,10 +15,10 @@ public class TennisCoach implements Coach {
 	
 	// spring will use any @Autowired method to resolve a dependency
 	// regardless of its name
-	@Autowired
-	public void whatever(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
-	}
+//	@Autowired
+//	public void whatever(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
 	
 	// configure dependency with @Autowired annotation
 //	@Autowired
