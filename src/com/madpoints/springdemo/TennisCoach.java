@@ -12,8 +12,10 @@ public class TennisCoach implements Coach {
 	public TennisCoach() {
 	}
 	
+	// spring will use any @Autowired method to resolve a dependency
+	// regardless of its name
 	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
+	public void whatever(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 	
