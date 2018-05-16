@@ -8,11 +8,20 @@ public class TennisCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
-	// configure dependency with @Autowired annotation
-	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
+	// default constructor
+	public TennisCoach() {
 	}
+	
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+	
+	// configure dependency with @Autowired annotation
+//	@Autowired
+//	public TennisCoach(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -24,6 +33,4 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 	
-	
-
 }
