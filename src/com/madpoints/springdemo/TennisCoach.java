@@ -1,13 +1,15 @@
 package com.madpoints.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 	
 	@Autowired
-	private FortuneService fortuneService;
+	@Qualifier("randomFortuneService")
+	private FortuneService happyFortuneService;
 	
 	// default constructor
 	public TennisCoach() {
@@ -33,7 +35,7 @@ public class TennisCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return fortuneService.getFortune();
+		return happyFortuneService.getFortune();
 	}
 	
 }
