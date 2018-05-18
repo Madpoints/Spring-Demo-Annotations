@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class SwimCoach implements Coach {
 	
-	@Value("${foo.emal}")
+	@Value("${foo.email}")
 	private String email;
 	
 	@Value("${foo.team}")
