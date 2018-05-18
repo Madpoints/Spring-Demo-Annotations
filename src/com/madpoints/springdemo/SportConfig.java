@@ -3,9 +3,10 @@ package com.madpoints.springdemo;
 import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-// @ComponentScan("com.madpoints.springdemo")
+@PropertySource("classpath:sport.porperties")
 public class SportConfig {
 	
 	@Bean
